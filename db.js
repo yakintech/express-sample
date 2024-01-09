@@ -1,8 +1,6 @@
 const { default: mongoose } = require("mongoose");
 
 
-
-
 const db = {
     connect: () => {
         mongoose.connect(process.env.CONNECTION_STRING)
