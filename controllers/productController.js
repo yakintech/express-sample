@@ -3,7 +3,7 @@ const { Product } = require("../models/Product");
 
 const productController = {
     getAll: (req, res) => {
-        Product.find().populate("category").select("name price description category.name")
+        Product.find().populate("category").select("name")
             .then((products) => {
                 return res.json(products);
             })
